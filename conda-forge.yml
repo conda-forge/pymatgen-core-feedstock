@@ -10,3 +10,6 @@ bot:
 provider:
   linux_aarch64: azure
   win: azure
+build_platform:
+  osx_arm64: osx_64
+test: native_and_emulated
