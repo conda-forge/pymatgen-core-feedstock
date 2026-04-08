@@ -1,5 +1,5 @@
 {% set name = "pymatgen-core" %}
-{% set version = "2026.3.9" %}
+{% set version = "2026.4.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pymatgen_core-{{ version }}.tar.gz
-  sha256: 9fa621fba4e2e330c3563db0b8ce5a78bab0ef3d6531368600e4f77d1296d96d
+  sha256: 6b1c3a9a9e1d6a029321466f59f060dc28023b6d55fba325c48d0874667a868a
 
 build:
   skip: true  # [py<=310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
