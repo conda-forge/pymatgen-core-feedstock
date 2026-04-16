@@ -1,5 +1,5 @@
 {% set name = "pymatgen-core" %}
-{% set version = "2026.4.7" %}
+{% set version = "2026.4.16" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pymatgen_core-{{ version }}.tar.gz
-  sha256: 6b1c3a9a9e1d6a029321466f59f060dc28023b6d55fba325c48d0874667a868a
+  sha256: 7b5f00ce7c6ae6d77eb79ab1d7f71609a639dbd9639d299cc3a9e1fac65adaf6
 
 build:
   skip: true  # [py<=310]
@@ -29,6 +29,7 @@ requirements:
     - setuptools >=65.0.0
     - pip
   run:
+    - lxml >=4.9
     - python
     - matplotlib-base >=3.8
     - monty >=2026.2.18
