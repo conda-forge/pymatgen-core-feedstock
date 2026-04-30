@@ -3,7 +3,7 @@ About pymatgen-core-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymatgen-core-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pymatgen.org
+Home: https://pymatgen.org/
 
 Package license: MIT
 
