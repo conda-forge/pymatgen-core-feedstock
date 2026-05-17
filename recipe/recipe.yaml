@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pymatgen-core
-  version: "2026.4.16"
+  version: 2026.5.17
 
 package:
   name: ${{ name|lower }}
@@ -10,23 +10,21 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymatgen_core-${{ version }}.tar.gz
-  sha256: 7b5f00ce7c6ae6d77eb79ab1d7f71609a639dbd9639d299cc3a9e1fac65adaf6
+  sha256: a312de9ff88fb1b9acc8e01cf2035c9b3e16bf401d724187bcba20b926888ab8
 
 build:
-  number: 1
+  number: 0
   skip: match(python, "<=3.10")
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: cython
-    - if: build_platform != target_platform
-      then: numpy
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - cython
+        - numpy
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
   host:
@@ -36,7 +34,7 @@ requirements:
     - setuptools >=65.0.0
     - pip
   run:
-    - lxml >=4.9
+    - lxml >=6.1.0
     - python
     - matplotlib-base >=3.8
     - monty >=2026.2.18
@@ -57,7 +55,6 @@ requirements:
     - tqdm >=4.67.3
     - requests >=2.32.5
     - numpy
-
 tests:
   - python:
       imports:
