@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pymatgen-core
-  version: 2026.5.17
+  version: 2026.5.18
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymatgen_core-${{ version }}.tar.gz
-  sha256: a312de9ff88fb1b9acc8e01cf2035c9b3e16bf401d724187bcba20b926888ab8
+  sha256: bdbe8c591bbac7ed65922d710e94b661bb540baae27217ceadd59e31e9c3ff07
 
 build:
   number: 0
@@ -37,7 +37,7 @@ requirements:
     - lxml >=6.1.0
     - python
     - matplotlib-base >=3.8
-    - monty >=2026.2.18
+    - monty >=2026.5.18
     - networkx >=2.7
     - orjson >=3.10,<4
     - palettable >=3.3.3
