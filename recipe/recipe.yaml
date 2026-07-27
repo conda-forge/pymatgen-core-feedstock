@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pymatgen-core
-  version: 2026.7.16
+  version: "2026.7.27"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymatgen_core-${{ version }}.tar.gz
-  sha256: 7db6f26be624c02b2e97f259b8f250a7ea8e71397b8bada15fae012622833f29
+  sha256: d7fe52dc4bdd8ad65ba11b878b1d053647d02b72fb32c57d4fb5fff9d10328c7
 
 build:
   number: 0
