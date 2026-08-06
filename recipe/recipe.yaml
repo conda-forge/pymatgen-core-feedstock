@@ -18,9 +18,9 @@ build:
   script:
     - if: win
       then:
-        - set SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+        - set SETUPTOOLS_SCM_PRETEND_VERSION=v${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
       else:
-        - SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+        - SETUPTOOLS_SCM_PRETEND_VERSION=v${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
