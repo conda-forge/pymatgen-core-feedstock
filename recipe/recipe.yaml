@@ -13,7 +13,7 @@ source:
   sha256: 42407e0b51807de73f01b16c604d1af84e8110feb300934391c048a14196deeb
 
 build:
-  number: 1
+  number: 2
   skip: match(python, "<=3.10")
   script:
     env:
@@ -36,6 +36,7 @@ requirements:
     - cython >=0.29.23
     - numpy >=2.1.0
     - setuptools >=65.0.0
+    - setuptools-scm >=8
     - pip
   run:
     - lxml >=6.1.0
