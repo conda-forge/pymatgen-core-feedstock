@@ -17,7 +17,7 @@ build:
   skip: match(python, "<=3.10")
   script:
     env:
-      SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYMATGEN_CORE: ${{ version }}
+      SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
     content:
       - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -36,6 +36,7 @@ requirements:
     - cython >=0.29.23
     - numpy >=2.1.0
     - setuptools >=65.0.0
+    - setuptools-scm >=8
     - pip
   run:
     - lxml >=6.1.0
