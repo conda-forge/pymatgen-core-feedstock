@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pymatgen-core
-  version: "2026.7.31"
+  version: 2026.8.13
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/pymatgen_core-${{ version }}.tar.gz
-  sha256: 42407e0b51807de73f01b16c604d1af84e8110feb300934391c048a14196deeb
+  sha256: b3966eab5bdb6fce83ac417e22e4bafe331f3380caef439cbb284c929cf9548c
 
 build:
-  number: 2
+  number: 0
   skip: match(python, "<=3.10")
   script:
     env:
@@ -55,11 +55,12 @@ requirements:
     - uncertainties >=3.1
     - plotly >=5.0
     - joblib >=1.3.2
-    - bibtexparser
+    - bibtexparser >=1,<2
     - tabulate >=0.9.0
     - tqdm >=4.67.3
     - requests >=2.32.5
     - numpy
+    - scipy >=1.14.1
 tests:
   - python:
       imports:
